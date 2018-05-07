@@ -1,0 +1,35 @@
+{
+  "name": "vue-cli-plugin-material",
+  "version": "0.1.0",
+  "description": "Vue CLI plugin for MDC Web and Vue MDC Adapter with Sass support.",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue-cli",
+    "vue-cli-plugin",
+    "vue-mdc-adapter",
+    "material",
+    "material-design",
+    "material-components",
+    "mdc-web",
+    "plugin"
+  ],
+  "homepage": "https://github.com/webdenim/vue-cli-plugin-material",
+  "bugs": {
+    "url": "https://github.com/webdenim/vue-cli-plugin-material/issues"
+  },
+  "license": "MIT",
+  "author": "Webdenim",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdenim/vue-cli-plugin-material.git"
+  },
+  "scripts": {
+    "release": "standard-version --tag-prefix",
+    "test": "echo TODO: make tests"
+  },
+  "devDependencies": {
+    "standard-version": "^4.3.0"
+  }
+}
