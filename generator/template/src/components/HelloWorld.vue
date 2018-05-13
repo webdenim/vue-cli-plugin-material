@@ -49,10 +49,10 @@
 </script>
 
 <style lang="scss">
-  // First, set the value for variable
+  /* First, set the value for variable */
   $mdc-layout-grid-max-width: 800px;
 
-  // Then, import required files
+  /* Then, import required files */
   @import "@material/layout-grid/mdc-layout-grid";
   @import "@material/rtl/mixins";
   @import "@material/theme/color-palette";
