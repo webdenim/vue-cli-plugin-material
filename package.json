@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-material",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Vue CLI plugin for MDC Web and Vue MDC Adapter with Sass support.",
   "keywords": [
     "vue",
