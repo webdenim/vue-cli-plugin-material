@@ -1,25 +1,20 @@
 module.exports = (api, projectOptions) => {
   api.chainWebpack(webpackConfig => {
     webpackConfig.module
-      .rule('vue')
-      .use('vue-loader')
-      .tap(options => {
-        const scss = options.loaders.scss.pop()
-        scss.options.includePaths = [
-          api.resolve('node_modules')
-        ]
-        options.loaders.scss.push(scss)
-        return options
-      })
-
-    webpackConfig.module
-      .rule('scss')
-      .use('sass-loader')
-      .tap(options => {
-        options.includePaths = [
-          api.resolve('node_modules')
-        ]
-        return options
-      })
+      .rule('css')
+        .test(/\.(s)css$/)
+          .use('vue-style-loader')
+            .loader('vue-style-loader')
+            .end()
+          .use('css-loader')
+            .loader('css-loader')
+            .end()
+          .use('sass-loader')
+            .loader('sass-loader')
+            .options({
+              includePaths: [
+                api.resolve('node_modules')
+              ]
+            })
   })
 }
