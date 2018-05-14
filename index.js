@@ -1,20 +1,13 @@
 module.exports = (api, projectOptions) => {
-  api.chainWebpack(webpackConfig => {
-    webpackConfig.module
-      .rule('css')
-        .test(/\.(s)css$/)
-          .use('vue-style-loader')
-            .loader('vue-style-loader')
-            .end()
-          .use('css-loader')
-            .loader('css-loader')
-            .end()
-          .use('sass-loader')
-            .loader('sass-loader')
-            .options({
-              includePaths: [
-                api.resolve('node_modules')
-              ]
-            })
+  api.configureWebpack(webpackConfig => {
+    const scssRule = webpackConfig.module.rules.find(rule => {
+      return rule.test.test('.scss')
+    })
+
+    const scssLoader = scssRule.oneOf[1].use.find(rule => {
+      return rule.loader === 'sass-loader'
+    })
+
+    Object.assign(scssLoader.options, {includePaths: [api.resolve('node_modules')]})
   })
 }
