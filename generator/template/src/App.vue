@@ -57,10 +57,10 @@
 </script>
 
 <style lang="scss">
-  /* First, set the value for variable */
+  // First, set the value for variable
   $mdc-typography-font-family: "Roboto Mono", monospace;
 
-  /* Then, import required files */
+  // Then, import required files
   @import "@material/typography/mixins";
 
   html {
