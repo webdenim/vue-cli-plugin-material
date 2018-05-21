@@ -14,7 +14,7 @@ and [Vue MDC Adapter](https://github.com/stasson/vue-mdc-adapter) to your projec
 
 ## Prerequisites
 
-This is a plugin for Vue CLI 3.x, so it's assumed you have [vue-cli](https://github.com/vuejs/vue-cli) installed:
+This is a plugin for @vue/cli@^3.0.0-beta.10 and Webpack 4, so it's assumed you have [vue-cli](https://github.com/vuejs/vue-cli) installed:
 
 ```bash
 npm i -g @vue/cli
